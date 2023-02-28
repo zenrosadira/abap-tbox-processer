@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>TBOX | Processer</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>EXECUTE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Execute RUN method of instance parameter</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>GET_XML</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get serialization for an instance parameter</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>SET_LOGGER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set instance logger for class ZCL_BASIC_LOGGER</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>START_JOB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Execute method as background job</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>UPDATE_TASK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Execute method in UPDATE TASK</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>_JOBBER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create Job</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>_LOGGER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ERROR Logger</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZTBOX_CL_PROCESSER</CLSNAME>
+     <CMPNAME>_METHOD_NAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Full Component Name</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

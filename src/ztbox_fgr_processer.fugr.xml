@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>TBOX | Processer</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZTBOX_FGR_PROCESSERTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZTBOX_FGR_PROCESSER</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZTBOX_FM_PROCESSER_UT</FUNCNAME>
+     <UPDATE_TASK>2</UPDATE_TASK>
+     <SHORT_TEXT>TBOX | Processer in Update Task</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>RUNNABLE</PARAMETER>
+       <TYP>ZTBOX_PROCESSER_XML_CS_DE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>RUNNABLE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZTBOX_PROCESSER_XML_CS_DE</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

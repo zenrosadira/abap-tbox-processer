@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+ <asx:values>
+  <DATA>
+   <GROUP_ID>ztbox</GROUP_ID>
+   <ARTIFACT_ID>abap-tbox-processer</ARTIFACT_ID>
+   <VERSION>0.1</VERSION>
+   <REPOSITORY_TYPE>abapGit</REPOSITORY_TYPE>
+   <GIT_URL>https://github.com/zenrosadira/abap-tbox-processer.git</GIT_URL>
+   <DEPENDENCIES>
+    <item>
+     <GROUP_ID>ztbox</GROUP_ID>
+     <ARTIFACT_ID>abap-tbox-logger</ARTIFACT_ID>
+     <GIT_URL>https://github.com/zenrosadira/abap-tbox-logger.git</GIT_URL>
+    </item>
+    <item>
+     <GROUP_ID>ztbox</GROUP_ID>
+     <ARTIFACT_ID>abap-tbox-jobber</ARTIFACT_ID>
+     <GIT_URL>https://github.com/zenrosadira/abap-tbox-jobber.git</GIT_URL>
+    </item>
+   </DEPENDENCIES>
+  </DATA>
+ </asx:values>
+</asx:abap>
