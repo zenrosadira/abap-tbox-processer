@@ -8,9 +8,6 @@ public section.
   interfaces IF_SERIALIZABLE_OBJECT .
   interfaces ZTBOX_IF_RUNNABLE .
 
-  methods SET_LOGGER
-    importing
-      !IO_LOGGER type ref to ZCL_BASIC_LOGGER .
   methods START_JOB
     importing
       !METHOD_NAME type SEOCPDNAME .
@@ -29,20 +26,12 @@ protected section.
 private section.
 
   data _METHOD_NAME type SEOCPDNAME .
-  data _LOGGER type ref to ZCL_BASIC_LOGGER .
-  data _JOBBER type ref to ZTBOX_CL_JOBBER .
+  class-data _EXCEPTION type STRING .
 ENDCLASS.
 
 
 
 CLASS ZTBOX_CL_PROCESSER IMPLEMENTATION.
-
-
-  METHOD set_logger.
-
-    _logger = io_logger.
-
-  ENDMETHOD.
 
 
   METHOD update_task.
@@ -60,7 +49,7 @@ CLASS ZTBOX_CL_PROCESSER IMPLEMENTATION.
 
   METHOD execute.
 
-    DATA lo_runnable TYPE REF TO zif_runnable.
+    DATA instance TYPE REF TO ztbox_if_runnable.
 
     CHECK runnable IS NOT INITIAL.
 
@@ -68,24 +57,23 @@ CLASS ZTBOX_CL_PROCESSER IMPLEMENTATION.
 
         CALL TRANSFORMATION id
         SOURCE XML runnable
-        RESULT runnable = lo_runnable.
+        RESULT runnable = instance.
 
-      CATCH cx_st_error INTO DATA(lx_st).
-
-        WRITE: lx_st->get_text( ).
+      CATCH cx_st_error INTO DATA(x_st).
+        _exception = x_st->get_text( ).
         RETURN.
 
     ENDTRY.
 
-    CHECK lo_runnable IS BOUND.
+    CHECK instance IS BOUND.
 
     TRY.
 
-        DATA(lo_result) = lo_runnable->run(  ).
+        instance->run(  ).
 
-      CATCH cx_root INTO DATA(lo_failure).
+      CATCH cx_root INTO DATA(o_root).
 
-        WRITE: lo_failure->get_text( ).
+        _exception = o_root->get_text( ).
 
     ENDTRY.
 
@@ -146,8 +134,8 @@ CLASS ZTBOX_CL_PROCESSER IMPLEMENTATION.
           SOURCE runnable = instance
           RESULT XML r_xml.
 
-      CATCH cx_transformation_error INTO DATA(lx_error).
-        RETURN.
+      CATCH cx_transformation_error INTO DATA(x_trans).
+        _exception = x_trans->get_text( ).
 
     ENDTRY.
 
@@ -162,10 +150,8 @@ CLASS ZTBOX_CL_PROCESSER IMPLEMENTATION.
 
         CALL METHOD (_method_name).
 
-      CATCH cx_root INTO DATA(lx_root).
-        IF _logger IS BOUND.
-          _logger->catch( i_error = lx_root ).
-        ENDIF.
+      CATCH cx_root INTO DATA(x_root).
+        _exception = x_root->get_text( ).
 
     ENDTRY.
 

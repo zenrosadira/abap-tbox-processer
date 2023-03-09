@@ -23,13 +23,7 @@ CLASS ZTBOX_CL_PROCESSER_APACK IMPLEMENTATION.
       group_id      = 'ztbox'
       artifact_id   = 'abap-tbox-processer'
       version       = '0.1'
-      git_url       = 'https://github.com/zenrosadira/abap-tbox-processer.git'
-      dependencies  = VALUE #( (  group_id    = 'ztbox'
-                                  artifact_id = 'abap-tbox-logger'
-                                  git_url     = 'https://github.com/zenrosadira/abap-tbox-logger.git' )
-                               (  group_id    = 'ztbox'
-                                  artifact_id = 'abap-tbox-jobber'
-                                  git_url     = 'https://github.com/zenrosadira/abap-tbox-jobber.git' ) ) ).
+      git_url       = 'https://github.com/zenrosadira/abap-tbox-processer.git' ).
 
   ENDMETHOD.
 ENDCLASS.
