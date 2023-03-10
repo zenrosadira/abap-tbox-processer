@@ -4,5 +4,7 @@ interface ZTBOX_IF_RUNNABLE
 
   interfaces IF_SERIALIZABLE_OBJECT .
 
-  methods RUN .
+  methods RUN
+    returning
+      value(R_RESULT) type ref to OBJECT .
 endinterface.

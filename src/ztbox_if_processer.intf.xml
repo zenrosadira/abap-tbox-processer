@@ -3,21 +3,13 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOINTERF>
-    <CLSNAME>ZTBOX_IF_RUNNABLE</CLSNAME>
+    <CLSNAME>ZTBOX_IF_PROCESSER</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Runnable</DESCRIPT>
+    <DESCRIPT>Call methods in Update Task/Background</DESCRIPT>
     <EXPOSURE>2</EXPOSURE>
     <STATE>1</STATE>
     <UNICODE>X</UNICODE>
    </VSEOINTERF>
-   <DESCRIPTIONS_SUB>
-    <SEOSUBCOTX>
-     <CMPNAME>RUN</CMPNAME>
-     <SCONAME>R_RESULT</SCONAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Runnable</DESCRIPT>
-    </SEOSUBCOTX>
-   </DESCRIPTIONS_SUB>
   </asx:values>
  </asx:abap>
 </abapGit>

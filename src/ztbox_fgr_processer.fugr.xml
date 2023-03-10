@@ -9,6 +9,34 @@
    </INCLUDES>
    <FUNCTIONS>
     <item>
+     <FUNCNAME>ZTBOX_FM_PROCESSER_RFC</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>TBOX | Processer in Update Task</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>RUNNABLE</PARAMETER>
+       <TYP>ZTBOX_PROCESSER_XML_CS_DE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_RESULT</PARAMETER>
+       <TYP>STRING</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>RUNNABLE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZTBOX_PROCESSER_XML_CS_DE</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_RESULT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
      <FUNCNAME>ZTBOX_FM_PROCESSER_UT</FUNCNAME>
      <UPDATE_TASK>2</UPDATE_TASK>
      <SHORT_TEXT>TBOX | Processer in Update Task</SHORT_TEXT>
