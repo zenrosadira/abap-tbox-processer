@@ -29,10 +29,7 @@ processer->perform_tasks( VALUE #(
   ( 'CREATE_MIRO_INVOICE' ) ) ).
 ```
 Each of these methods from `ZCL_MY_CLASS` must not have mandatory parameters.
-Any initial parameters should be set as instance attributes, such as with 
-```
-o_my_object->set_data( ... ).
-```
+Any initial parameters should be set as instance attributes, such as with `o_my_object->set_data( ... ).`.
 If, e.g., `CREATE_PURCHASE_ORDER` method sets instance attribute `_purchase_ord_number`, its value is accessible from method `CREATE_GOODS_RECEIPT` when the sequence of tasks of the last example is performed.
 
 
