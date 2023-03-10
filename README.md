@@ -19,7 +19,7 @@ processer->new_task( 'PROCESS_DATA_NEW_SESSION' ).
 ```
 + To execute a method as a background job: call method `NEW_JOB` passing the name of the method
 ```
-processer->new_task( 'PROCESS_DATA_BACKGROUND' ).
+processer->new_job( 'PROCESS_DATA_BACKGROUND' ).
 ```
 + To perform a sequence of task-methods in such a way each task is executed only after the previous one has ended: call method `PERFORM_TASKS` passing the name of the methods forming the sequence (order is relevant)
 ```
